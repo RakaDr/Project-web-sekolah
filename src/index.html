@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
     <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
     <style>
+
         .gradient {
             background: linear-gradient(95deg, #0693e3 0%, #f2f2f2 100%);
         }
@@ -50,20 +51,25 @@
                     </svg>
                 </button>
             </div>
-            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
                 id="nav-content">
                 <ul class="list-reset lg:flex justify-end flex-1 items-center">
                     <li class="mr-3">
-                        <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                        <a class="block text-black no-underline hover:text-gray-800 hover:bg-gray-200 rounded-md py-2 px-4 transition duration-300 w-full text-left hover:scale-105"
                             href="#tentangsekolah">Tentang Sekolah</a>
                     </li>
                     <li class="mr-3">
-                        <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                        <a class="block text-black no-underline hover:text-gray-800 hover:bg-gray-200 rounded-md py-2 px-4 transition duration-300 w-full text-left hover:scale-105"
                             href="#jurusan">Jurusan</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="block text-black no-underline hover:text-gray-800 hover:bg-gray-200 rounded-md py-2 px-4 transition duration-300 w-full text-left hover:scale-105"
+                            href="#ppdb">PPDB</a>
                     </li>
                 </ul>
                 <button id="navAction"
-                    class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out hover:bg-[#0379bf] hover:text-white
+                    ">
                     Login
                 </button>
             </div>
@@ -119,7 +125,7 @@
             </g>
         </svg>
     </div>
-    <section id="tentangsekolah" class="bg-white border-b py-8">
+    <section id="tentangsekolah" class="bg-white py-8">
         <div class="container max-w-5xl mx-auto m-8">
             <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
                 Tentang Sekolah
@@ -186,36 +192,43 @@
 
         </div>
     </section>
-    <section class="bg-white border-b py-8">
+    <section class="bg-white py-8">
         <div id="jurusan" class="container mx-auto flex flex-wrap pt-4 pb-12">
             <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
                 Jurusan
             </h1>
-            <div id="cardjurusan" class="justify-center items-center flex flex-wrap gap-5 mx-auto">
-                <div
-                    class="max-w-xs bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition duration-300">
+            <div class="w-full mb-8">
+                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+            </div>
+            <div class="justify-center items-center flex flex-wrap gap-5 mx-auto p-5">
+                <div id="animatedCard1"
+                    class="opacity-0 translate-y-10 transition-all duration-1000 ease-in-out max-w-xs bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 transition-transform transform">
                     <a href="#">
-                        <img class="rounded-t-lg" src="img/tkj.jpg" alt="" />
+                        <img class="rounded-t-lg transition-transform duration-300 transform" src="img/tkj.jpg"
+                            alt="" />
                     </a>
                     <div class="p-5">
                         <a href="#">
-                            <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900">Teknik Komputer
-                                Jaringan</h5>
+                            <h5
+                                class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 hover:text-blue-600 transition-colors duration-300">
+                                Teknik Komputer Jaringan</h5>
                         </a>
                         <p class="text-center mb-3 font-normal text-gray-700">Jurusan ini fokus pada pengembangan
                             keterampilan dan pengetahuan di bidang ilmu pengetahuan teknologi informasi, khususnya dalam
                             hal perangkat keras (hardware) dan perangkat lunak (software) serta jaringan komputer.</p>
                     </div>
                 </div>
-                <div
-                    class="max-w-xs bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition duration-300">
+                <div id="animatedCard2"
+                    class="opacity-0 translate-y-10 transition-all duration-1000 ease-in-out max-w-xs bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 transition-transform transform">
                     <a href="#">
-                        <img class="rounded-t-lg" src="img/rpl.jpg" alt="" />
+                        <img class="rounded-t-lg transition-transform duration-300 transform" src="img/rpl.jpg"
+                            alt="" />
                     </a>
                     <div class="p-5">
                         <a href="#">
-                            <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900">Rekayasa
-                                Perangkat Lunak</h5>
+                            <h5
+                                class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 hover:text-blue-600 transition-colors duration-300">
+                                Rekayasa Perangkat Lunak</h5>
                         </a>
                         <p class="text-center mb-3 font-normal text-gray-700">Jurusan RPL mengajarkan siswa tentang
                             berbagai aspek pengembangan perangkat lunak, termasuk analisis kebutuhan, perancangan
@@ -223,29 +236,34 @@
                     </div>
                 </div>
 
-                <div
-                    class="max-w-xs bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition duration-300">
+                <div id="animatedCard3"
+                    class="opacity-0 translate-y-10 transition-all duration-1000 ease-in-out max-w-xs bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 transition-transform transform">
                     <a href="#">
-                        <img class="rounded-t-lg" src="img/multimedia.jpg" alt="" />
+                        <img class="rounded-t-lg transition-transform duration-300 transform" src="img/multimedia.jpg"
+                            alt="" />
                     </a>
                     <div class="p-5">
                         <a href="#">
-                            <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900">Multimedia</h5>
+                            <h5
+                                class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 hover:text-blue-600 transition-colors duration-300">
+                                Multimedia</h5>
                         </a>
                         <p class="text-center mb-3 font-normal text-gray-700">Jurusan Multimedia adalah program
                             pendidikan yang fokus pada pengembangan keterampilan dalam pembuatan dan pengelolaan konten
                             digital yang melibatkan teks, gambar, audio, dan video.</p>
                     </div>
                 </div>
-                <div
-                    class="max-w-xs bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 transition duration-300">
+                <div id="animatedCard4"
+                    class="opacity-0 translate-y-10 transition-all duration-1000 ease-in-out max-w-xs bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 transition-transform transform">
                     <a href="#">
-                        <img class="rounded-t-lg" src="img/TAV.png" alt="" />
+                        <img class="rounded-t-lg transition-transform duration-300 transform" src="img/TAV.png"
+                            alt="" />
                     </a>
                     <div class="p-5">
                         <a href="#">
-                            <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900">Teknik Audio
-                                Video</h5>
+                            <h5
+                                class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 hover:text-blue-600 transition-colors duration-300">
+                                Teknik Audio Video</h5>
                         </a>
                         <p class="text-center mb-3 font-normal text-gray-700">Jurusan ini mempelajari dasar-dasar
                             teknologi, instalasi, perawatan, dan pengoperasian perangkat audio dan video, seperti sound
@@ -257,7 +275,27 @@
 
         </div>
     </section>
-
+    <section class="bg-white py-8">
+        <div id="ppdb" class="container mx-auto flex flex-wrap pt-4 pb-12">
+            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+                Informasi PPDB
+            </h1>
+            <div class="w-full mb-8">
+                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center items-center space-x-0 md:space-x-20 w-full">
+                <img class="h-auto max-w-xs md:max-w-xl rounded-lg shadow-xl dark:shadow-gray-400 mb-4 md:mb-0 slide-in-left transition-transform duration-300 transform hover:scale-105"
+                    src="img/ppdb.png" alt="image description">
+                <img class="h-auto max-w-xs md:max-w-xl rounded-lg shadow-xl dark:shadow-gray-400 transition-transform duration-300 transform hover:scale-105"
+                    src="img/ppdb2.png" alt="image description">
+            </div>
+            <div class="w-full flex justify-center mt-10"> <!-- Menggunakan w-full dan flex -->
+                <button class="hover:underline bg-[#0693e3] text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out hover:bg-[#0379bf]">
+                    Daftar Sekarang !
+                </button>
+            </div>
+        </div>
+    </section>
     <!-- Change the colour #f8fafc to match the previous section colour -->
     <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -472,10 +510,13 @@
         }
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const image1 = document.getElementById("animatedImage1");
             const image2 = document.getElementById("animatedImage2");
-    
+            const card1 = document.getElementById("animatedCard1");
+            const card2 = document.getElementById("animatedCard2");
+            const card3 = document.getElementById("animatedCard3");
+            const card4 = document.getElementById("animatedCard4");
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -486,11 +527,16 @@
                     }
                 });
             });
-    
+
             observer.observe(image1);
             observer.observe(image2);
+            observer.observe(card1);
+            observer.observe(card2);
+            observer.observe(card3);
+            observer.observe(card4);
         });
     </script>
+
     <script>
         document.getElementById("navAction").addEventListener("click", function () {
             window.location.href = "login.html"; // Ganti dengan path yang sesuai jika perlu
