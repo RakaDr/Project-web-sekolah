@@ -1,13 +1,9 @@
-<!DOCTYPE html>
 <html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="https://unpkg.com/cally"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.1/daisyui.css" rel="stylesheet" type="text/css" />
+    <title>Daftar Pegawai</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -55,12 +51,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="profil.html"
                         class="flex items-center p-3 text-black rounded-lg hover:bg-[#0693e3] hover:text-white hover:shadow-lg transition duration-300">
                         <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4Zm10 5a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1Zm0 3a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1Zm0 3a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1Zm-8-5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm1.942 4a3 3 0 0 0-2.847 2.051l-.044.133-.004.012c-.042.126-.055.167-.042.195.006.013.02.023.038.039.032.025.08.064.146.155A1 1 0 0 0 6 17h6a1 1 0 0 0 .811-.415.713.713 0 0 1 .146-.155c.019-.016.031-.026.038-.04.014-.027 0-.068-.042-.194l-.004-.012 ```html
-                        .044-.133A3 3 0 0 0 10.059 14H7.942Z" clip-rule="evenodd" />
+                    .044-.133A3 3 0 0 0 10.059 14H7.942Z" clip-rule="evenodd" />
                         </svg>
                         <span class="flex-1 ms-3 whitespace-nowrap">Profil</span>
                     </a>
@@ -112,7 +108,7 @@
                     </a>
                     <ul class="ml-4 space-y-2 hidden">
                         <li>
-                            <a href="daftar_siswa.html"
+                            <a href="daftarsiswa.html"
                                 class="flex items-center p-3 text-black rounded-lg hover:bg-[#0693e3] hover:text-white hover:shadow-lg transition duration-300">
                                 <span class="flex-1 ms-3 whitespace-nowrap">Daftar Siswa</span>
                             </a>
@@ -139,38 +135,124 @@
             </ul>
         </div>
     </aside>
-
-
-
-
     <div class="p-4 sm:ml-64">
         <div class="max-w-5xl mx-auto bg-white p-6 rounded-lg shadow-lg border border-[#0693e3]">
-            <h1 class="text-2xl font-bold mb-4">Profil Pegawai</h1>
-            <h2 class="text-3xl font-bold text-[#0693e3]">Welcome Agus Mewing!</h2>
-            <div class="mb-8">
-                <h3 class="text-xl font-bold mb-2 mt-4">Pengumuman</h3> <!-- Menambahkan margin atas di sini -->
-                <div class="border p-4 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                    <p class="text-black text-justify sm:text-left">Libur akhir semester akan dimulai pada tanggal 20 Desember 2024 hingga 5 Januari 2025. Kegiatan belajar mengajar akan dimulai kembali pada 6 Januari 2025.</p>
-                </div>
-                <h3 class="text-xl font-bold mb-2 mt-4">Kalender</h3> <!-- Menambahkan margin atas di sini -->
-                <div class="flex justify-center ">
-                    <calendar-date
-                        class=" hover:shadow-xl transition duration-300w-full md:w-96 bg-base-100 border border-base-300 shadow-lg rounded-box">
-                        <svg aria-label="Previous" class="size-4" slot="previous" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path>
-                        </svg>
-                        <svg aria-label="Next" class="size-4" slot="next" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24">
-                            <path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
-                        </svg>
-                        <calendar-month class="w-full md:w-96"></calendar-month>
-                    </calendar-date>
-                </div>
+            <h1 class="text-2xl font-bold mb-4">Daftar Pegawai</h1>
+    
+            <div class="relative overflow-x-auto shadow-md sm:rounded-md">
+                <table class="min-w-full text-sm text-left rtl:text-right">
+                    <thead class="text-xs text-white uppercase bg-[#0693e3]">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 border-b border-white">
+                                No
+                            </th>
+                            <th scope="col" class="px-6 py-3 border-b border-white">
+                                Nama
+                            </th>
+                            <th scope="col" class="px-6 py-3 border-b border-white">
+                                Jabatan
+                            </th>
+                            <th scope="col" class="px-6 py-3 border-b border-white">
+                                Tempat Lahir
+                            </th>
+                            <th scope="col" class="px-6 py-3 border-b border-white">
+                                Tanggal Lahir
+                            </th>
+                            <th scope="col" class="px-6 py-3 border-b border-white">
+                                Aktif
+                            </th>
+                            <th scope="col" class="px-6 py-3 border-b border-white">
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b border-[#0693e3] hover:bg-gray-200">
+                            <td class="px-6 py-4 font-medium text-black whitespace-nowrap">1</td>
+                            <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap">
+                                Raka Dwi Randika
+                            </th>
+                            <td class="px-6 py-4">Kepala Sekolah</td>
+                            <td class="px-6 py-4">Jakarta</td>
+                            <td class="px-6 py-4">19/05/2004</td>
+                            <td class="px-6 py-4">
+                                <div class="flex justify-center items-center">
+                                    <input id="checkbox-active-1" type="checkbox"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-active-1" class="sr-only">Aktif</label>
+                                </div>
+                            </td>
+                            <td class="flex items-center px-6 py-4">
+                                <a href="#" class="font-medium text-[#0693e3] hover:underline">Edit</a>
+                                <a href="#" class="font-medium text-[#0693e3] hover:underline ms-3">View</a>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-[#0693e3] hover:bg-gray-200">
+                            <td class="px-6 py-4 font-medium text-black whitespace-nowrap">2</td>
+                            <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap">
+                                Anwar Maulana
+                            </th>
+                            <td class="px-6 py-4">Wakil Kepala Sekolah</td>
+                            <td class="px-6 py-4">Bojong Gede</td>
+                            <td class="px-6 py-4">26/07/2005</td>
+                            <td class="px-6 py-4">
+                                <div class="flex justify-center items-center">
+                                    <input id="checkbox-active-2" type="checkbox"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-active-2" class="sr-only">Aktif</label>
+                                </div>
+                            </td>
+                            <td class="flex items-center px-6 py-4">
+                                <a href="#" class="font-medium text-[#0693e3] hover:underline">Edit</a>
+                                <a href="#" class="font-medium text-[#0693e3] hover:underline ms-3">View</a>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-[#0693e3] hover:bg-gray-200">
+                            <td class="px-6 py-4 font-medium text-black whitespace-nowrap">3</td>
+                            <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap">
+                                Shifa Nur Fauziah
+                            </th>
+                            <td class="px-6 py-4">Guru</td>
+                            <td class="px-6 py-4">Nambo</td>
+                            <td class="px-6 py-4">23/04/2006</td>
+                            <td class="px-6 py-4">
+                                <div class="flex justify-center items-center">
+                                    <input id="checkbox-active-3" type="checkbox"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-active-3" class="sr-only">Aktif</label>
+                                </div>
+                            </td>
+                            <td class="flex items-center px-6 py-4">
+                                <a href="#" class="font-medium text-[#0693e3] hover:underline">Edit</a>
+                                <a href="#" class="font-medium text-[#0693e3] hover:underline ms-3">View</a>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-[#0693e3] hover:bg-gray-200">
+                            <td class="px-6 py-4 font-medium text-black whitespace-nowrap">4</td>
+                            <th scope="row" class="px-6 py-4 font-medium text-black whitespace-nowrap">
+                                Muhammad Hisyam Alfaris
+                            </th>
+                            <td class="px-6 py-4">Staff</td>
+                            <td class="px-6 py-4">Bogor</td>
+                            <td class="px-6 py-4">11/12/2005</td>
+                            <td class="px-6 py-4">
+                                <div class="flex justify-center items-center">
+                                    <input id="checkbox-active-4" type="checkbox"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="checkbox-active-4" class="sr-only">Aktif</label>
+                                </div>
+                            </td>
+                            <td class="flex items-center px-6 py-4">
+                                <a href="#" class="font-medium text-[#0693e3] hover:underline">Edit</a>
+                                <a href="#" class="font-medium text-[#0693e3] hover:underline ms-3">View</a>
+                            </td>
+                        </tr>
+                        <!-- Tambahkan lebih banyak baris sesuai kebutuhan -->
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-
     <script>
         document.querySelectorAll('a[href="#"]').forEach(item => {
             item.addEventListener('click', event => {
